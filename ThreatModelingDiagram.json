@@ -48,6 +48,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -131,7 +132,6 @@
               ]
             },
             "id": "1387bc9d-4cc7-437d-99a1-a0e17519cfe3",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Client/Web Browser",
@@ -146,11 +146,11 @@
           {
             "position": {
               "x": 615,
-              "y": 30
+              "y": 40
             },
             "size": {
-              "width": 240,
-              "height": 240
+              "width": 220,
+              "height": 220
             },
             "attrs": {
               "text": {
@@ -164,6 +164,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -247,7 +248,6 @@
               ]
             },
             "id": "3df4db9a-e225-4ba5-9ddf-77af95f3ed36",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Node JS Server with RESTFUL API",
@@ -283,6 +283,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -366,7 +367,6 @@
               ]
             },
             "id": "31dcf00d-a82f-4840-86ad-bb758f5d4257",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Student Voter Information\nMongoDB",
@@ -402,6 +402,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -497,56 +498,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 4
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Student Voter Login",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Student Voter Login"
-            ],
-            "id": "294a4404-c5ab-4b45-b480-f2dff2fcb681",
-            "source": {
-              "cell": "1387bc9d-4cc7-437d-99a1-a0e17519cfe3"
-            },
-            "target": {
-              "cell": "3df4db9a-e225-4ba5-9ddf-77af95f3ed36"
-            },
-            "vertices": [
-              {
-                "x": 450,
-                "y": 60
-              }
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -592,7 +544,7 @@
             "vertices": [
               {
                 "x": 440,
-                "y": 110
+                "y": 120
               }
             ]
           },
@@ -640,7 +592,7 @@
             "vertices": [
               {
                 "x": 450,
-                "y": 170
+                "y": 180
               }
             ]
           },
@@ -688,7 +640,7 @@
             "vertices": [
               {
                 "x": 440,
-                "y": 220
+                "y": 230
               }
             ]
           },
@@ -736,7 +688,7 @@
             "vertices": [
               {
                 "x": 850,
-                "y": -70
+                "y": -60
               }
             ]
           },
@@ -784,7 +736,7 @@
             "vertices": [
               {
                 "x": 900,
-                "y": 0
+                "y": 10
               }
             ]
           },
@@ -832,7 +784,7 @@
             "vertices": [
               {
                 "x": 910,
-                "y": 280
+                "y": 290
               }
             ]
           },
@@ -880,9 +832,165 @@
             "vertices": [
               {
                 "x": 880,
-                "y": 350
+                "y": 360
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Student Voter Login",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Student Voter Login"
+            ],
+            "id": "294a4404-c5ab-4b45-b480-f2dff2fcb681",
+            "source": {
+              "cell": "1387bc9d-4cc7-437d-99a1-a0e17519cfe3"
+            },
+            "target": {
+              "cell": "3df4db9a-e225-4ba5-9ddf-77af95f3ed36"
+            },
+            "vertices": [
+              {
+                "x": 450,
+                "y": 70
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "7e9538e7-90e5-46f1-a80e-4063a99b82c5",
+            "source": {
+              "x": 600,
+              "y": -50
+            },
+            "target": {
+              "x": 590,
+              "y": 360
+            },
+            "vertices": [
+              {
+                "x": 550,
+                "y": 180
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "750fe19d-1ab3-4a80-83c6-9d244ef1ec68",
+            "source": {
+              "x": 750,
+              "y": 350
+            },
+            "target": {
+              "x": 1080,
+              "y": 210
+            },
+            "vertices": [
+              {
+                "x": 910,
+                "y": 230
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              {
+                "attrs": {
+                  "label": {
+                    "text": "Trust Boundary"
+                  }
+                }
+              }
+            ],
+            "id": "447d384b-00b8-44a0-a4a3-08b9919e51e1",
+            "source": {
+              "x": 720,
+              "y": -60
+            },
+            "target": {
+              "x": 920,
+              "y": 140
+            }
           }
         ],
         "description": "A MongoDB-backed web application uses Node.js, Web3.js, and Ethereum smart contracts to authenticate student voters and securely process their votes"
